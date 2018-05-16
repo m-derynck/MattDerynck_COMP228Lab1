@@ -83,6 +83,7 @@ public class Patient {
         this.postalCode = postalCode;
     }
 
+    //Returns patient information as a string
     public String getPatientInfo() {
 
         String patientInfo = String.format("PatientID: %s%nName: %s %s%nAddress: %s%nCity: %s%nProvince: %s%nPostal Code: %s",
