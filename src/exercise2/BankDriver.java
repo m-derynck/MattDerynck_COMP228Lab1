@@ -42,10 +42,10 @@ public class BankDriver {
         int selection = JOptionPane.showOptionDialog(null, account.getAccountInfo(),
                 "Account Menu", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[2]);
         //Deposit option selected
-        if (selection == 0) {
+        if (selection == JOptionPane.YES_OPTION) {
             account.deposit(getInputDouble("Enter amount to deposit into account", "Invalid deposit amount!"));
             displayAccountMenu(account);
-        } else if (selection == 1) {//Withdraw option selected
+        } else if (selection == JOptionPane.NO_OPTION) {//Withdraw option selected
             account.withdraw(getInputDouble("Enter amount to withdraw from account", "Invalid withdrawal amount!"));
             displayAccountMenu(account);
         }
